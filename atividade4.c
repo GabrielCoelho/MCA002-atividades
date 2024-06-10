@@ -7,6 +7,7 @@
  * Thaíto Gabriel Batalini
  * */
 
+#define euler 2.71828183
 #include <math.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -45,13 +46,23 @@ int calcula_integral(int operation) {
         return 0;
       }
       {
-        res = (pow(a, (k + 1)) / (k + 1)) - (pow(b, (k + 1)) / (k + 1));
+        res = (pow(b, (k + 1)) / (k + 1)) - (pow(a, (k + 1)) / (k + 1));
         printf("\nIntegral(%lf, %lf) x^%lf dx = %.4lf\n\n", a, b, k, res);
       }
       break;
     case 2:
     case 3:
-      printf("Entrou no 2 e/ou no 3\n");
+      printf("Digite o valor de a: ");
+      scanf("%lf", &a);
+      printf("Digite o valor de b: ");
+      scanf("%lf", &b);
+      if (operation == 2) {
+        res = log(b) - log(a);
+        printf("\nIntegral(%lf, %lf) 1/x dx = %.4lf\n\n", a, b, res);
+      } else {
+        res = sin(b) - sin(a);
+        printf("\nIntegral(%lf, %lf) cos(x) dx = %.4lf\n\n", a, b, res);
+      }
       break;
     default:
       printf("Digite uma opção válida!\n\n");
