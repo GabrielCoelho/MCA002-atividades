@@ -70,3 +70,9 @@ int calcula_integral(int operation) {
   }
   return 0;
 }
+
+/* @TODO: Devolutiva do professor
+ * Integral de 1/x é ln do módulo de x e assim podemos ter a e b negativos.
+ * O caso 2 não pode ter um intervalo que englobe zero.
+ * Para k=-1, no caso 1 a regra cai para o caso 2.
+ */

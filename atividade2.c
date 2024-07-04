@@ -65,3 +65,8 @@ int main() {
   val_vertice(a, b, c);
   return 0;
 }
+
+/* @TODO: Devolutiva do professor
+ * Não faltaram parênteses nos denominadores das raízes e das coordenadas do
+ * vértice. Xvertice não está retornando os valores corretos
+ */
